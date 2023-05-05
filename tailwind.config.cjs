@@ -14,20 +14,22 @@ module.exports = {
       "4xl": "2000px",
     },
     fontFamily: {
-      sans: ["Source Sans Pro", "sans-serif"],
+      sans: ["Montserrat", "sans-serif"],
+      serif: ["Playfair Display", 'serif'],
     },
     extend: {
       colors: {
-        primary: {
-          light: "#eee",
-          DEFAULT: "#ccc",
-          dark: "#666",
+        green: {
+          lightest: "#cbd3bd",
+          light: "#a3b18a",
+          DEFAULT: "#283618"
         },
-        secondary: {
-          light: "#f83",
-          DEFAULT: "#ff6a00",
-          dark: "#883900",
+        offWhite: {
+          DEFAULT: "#f5ebe0",
         },
+        peach: {
+          DEFAULT: "#e5989b",
+        }
       },
       maxWidth: (theme) => ({
         ...theme("spacing"),
