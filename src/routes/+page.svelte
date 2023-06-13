@@ -63,20 +63,37 @@
   };
 </script>
 
-<Container>
-  <NavList
-    items={["Venue", "Directions", "Accommodation", "Schedule", "RSVP"]}
-  />
-</Container>
-<div class="min-h-screen">
+<svelte:head>
+  <title
+    >Tom &amp; Kelly's Get Married | {data.event.venue} | {data.event
+      .date}</title
+  >
+</svelte:head>
+
+<div class="z-[9999] h-screen fixed">
   <Container>
-    {data.event.date}
+    <NavList
+      items={["Venue", "Directions", "Accommodation", "Schedule", "RSVP"]}
+    />
   </Container>
 </div>
+
+<div
+  class="relative flex items-center justify-center bg-gray-100 min-h-[90vh] text-center"
+>
+  <img
+    class="absolute top-0 left-0 w-full h-full opacity-50 bg-gray-900 object-cover object-center"
+    src="http://placedog.net/2000"
+    alt={`${data.event.venue} | ${data.event.venueAddress.join(", ")}`}
+  />
+  <Container>
+    <h1>Tom &amp; Kelly <span class="block">are getting married</span></h1>
+    <hr class="mx-auto w-1/5 h-[1px] bg-black my-4 border-none" />
+    <p>{data.event.date}</p>
+  </Container>
+</div>
+
 <!-- 
-
-  Montserrat regular /w 10% letter spacing
-
   Venue
   Getting to the day.
   where to stay

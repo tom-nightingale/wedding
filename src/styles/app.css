@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,16 +6,36 @@
 
 body,
 html {
-    min-height: 101%;
-    scroll-behavior: smooth;
+  min-height: 101%;
+  scroll-behavior: smooth;
 }
 
 body {
-    @apply font-sans antialiased leading-relaxed text-black;
+  @apply font-sans antialiased leading-relaxed text-black tracking-wide;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-serif;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
 }
 
 .prose {
-    p {
-        @apply mb-4;
-    }
+  p {
+    @apply mb-4;
+  }
 }

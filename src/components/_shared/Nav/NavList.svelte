@@ -44,7 +44,6 @@
     activeItemIndex = activeStyles.findIndex(
       item => item.name === event.detail.target.dataset.navitem,
     );
-    console.log("activeItem index", activeItemIndex);
   };
 </script>
 
